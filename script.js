@@ -28,8 +28,28 @@ const restaurant = {
   },
   order : function(starterIndex,mainIndex){
     return [this.starterMenu[starterIndex],this.mainMenu[mainIndex]]
+  },
+  orderPasta : function(ing1,ing2,ing3){
+    console.log(`this Pastais with ${ing1},${ing2},${ing3}`);
   }
 };
+
+// const ingredient = [
+//   prompt(`let's make pasta with ing1?`),
+//   prompt(`let's make pasta with ing2?`),
+//   prompt(`let's make pasta with ing3?`),
+// ]
+
+// console.log(restaurant.orderPasta(...ingredient));
+
+
+// const menu = [...restaurant.mainMenu,...restaurant.starterMenu]
+// console.log(menu);
+
+// const myName = "Sai Yan Naing";
+// const newArr = [...myName];
+// console.log(newArr);
+
 // const [starterFood,mainFood] = restaurant.order(2,0);
 // console.log(starterFood,mainFood);
 
@@ -73,3 +93,7 @@ const restaurant = {
 // const newArr = [...numArr,12]
 
 // console.log(newArr);
+
+// const arr = [1,2,3];
+// const newarr = [...arr,4,5]
+// console.log(newarr);
