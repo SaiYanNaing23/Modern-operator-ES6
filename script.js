@@ -30,9 +30,25 @@ const restaurant = {
     return [this.starterMenu[starterIndex],this.mainMenu[mainIndex]]
   }
 };
-const [starterFood,mainFood] = restaurant.order(2,0);
-console.log(starterFood,mainFood);
+// const [starterFood,mainFood] = restaurant.order(2,0);
+// console.log(starterFood,mainFood);
 
+// --------------------Object--------------------
+// const {name : resName,categories : tags,openingHours:hours} = restaurant;
+// console.log(resName,tags,hours);
+// const {sat: {open :openingTime,close : closingTime}} = hours;
+// console.log(openingTime,closingTime);
+// let y = 111;
+// let x = 222;
+
+// const num = {x:10,y:10,z:10}
+// ({x,y} = num );
+
+// console.log(x,y);
+
+
+
+// --------------------Array----------------------
 // const arr = [1,2,3];
 // const a = arr[0];
 // const b = arr[1];
@@ -49,7 +65,11 @@ console.log(starterFood,mainFood);
 // a = temp;
 // console.log(a,b);
 
-const arr = [1,2]
-const [a=2,b=3,c=4] = arr;
+// const arr = [1,2]
+// const [a=2,b=3,c=4] = arr;
 
-console.log(a,b,c);
+// console.log(a,b,c);
+// const numArr = [1,2,3]
+// const newArr = [...numArr,12]
+
+// console.log(newArr);
