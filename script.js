@@ -35,11 +35,40 @@ const restaurant = {
 
 };
 
+const restaurant1 = {
+  resName : "Hello",
+  numGuest : 0,
+}
+
+const restaurant2 = {
+  resName : "World",
+  owner : "Sai Yan Naing",
+}
+// OR
+// restaurant1.numGuest ||= 10;
+// restaurant2.owner || "Anynomous";
+// console.log(restaurant1.numGuest,restaurant2.owner);
+
+// // AND
+// restaurant1.numGuest &&= 10;
+// restaurant2.owner &&= "Anynomous";
+// console.log(restaurant1.numGuest,restaurant2.owner);
+
+// Nullish Assigment Operator
+
+// restaurant1.numGuest ??= 10;
+// restaurant2.owner ??= "Anynomous";
+// console.log(restaurant1.numGuest,restaurant2.owner);
+
+
+
+
+
 // restaurant.orderPasta && restaurant.orderPasta("M","B")
 
-restaurant.guessNum = 0;
-const guest = restaurant.guessNum ?? 10;
-console.log(guest);
+// restaurant.guessNum = 0;
+// const guest = restaurant.guessNum ?? 10;
+// console.log(guest);
 
 
 // console.log("h" && 23 && null && 0);
