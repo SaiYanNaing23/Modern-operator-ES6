@@ -160,3 +160,69 @@ const restaurant2 = {
 // const arr = [1,2,3];
 // const newarr = [...arr,4,5]
 // console.log(newarr);
+
+const game = {
+  team1: 'Bayern Munich',
+  team2: 'Borrussia Dortmund',
+  players: [
+    [
+      'Neuer',
+      'Pavard',
+      'Martinez',
+      'Alaba',
+      'Davies',
+      'Kimmich',
+      'Goretzka',
+      'Coman',
+      'Muller',
+      'Gnarby',
+      'Lewandowski',
+    ],
+    [
+      'Burki',
+      'Schulz',
+      'Hummels',
+      'Akanji',
+      'Hakimi',
+      'Weigl',
+      'Witsel',
+      'Hazard',
+      'Brandt',
+      'Sancho',
+      'Gotze',
+    ],
+  ],
+  score: '4:0',
+  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+  date: 'Nov 9th, 2037',
+  odds: {
+    team1: 1.33,
+    x: 3.25,
+    team2: 6.5,
+  },
+};
+
+const [player1,player2] = [game.team1,game.team2];
+// console.log(player1,player2);
+const player1Final = [...game.players[0],"Thiago","Coutinho","Perisic"]
+console.log(player1Final);
+
+const [t1GoalKeeper,t1FieldPlayer,t2GoalPlayer,t2FieldPlayer] = [game.players[0][0],game.players[0][0] &&= game.players[0],game.players[1][0],game.players[1][0] &&= game.players[1]];
+console.log(t1GoalKeeper,t1FieldPlayer,t2GoalPlayer,t2FieldPlayer);
+
+const allPlayers = [...game.players[0],...game.players[1]]
+console.log(allPlayers);
+
+const {team1,x:draw,team2} = game.odds;
+console.log(team1,team2,draw);
+
+const printGoal = ()=>{
+  // return`Player ${game.scored[0]}`
+  for(let i = 0;i <game.scored.length; i++){
+    console.log(`Player ${game.scored[i]} has scored ${i+1}`);
+  }
+}
+console.log(printGoal());
+
+const closeWinner = (team1<team2 && `team 1 gonna be win`) || (team2<team1 && `team 2 gonna be win`);
+console.log(closeWinner);
