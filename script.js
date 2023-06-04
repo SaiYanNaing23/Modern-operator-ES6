@@ -32,7 +32,41 @@ const restaurant = {
   orderPasta : function(ing1,ing2,ing3){
     console.log(`this Pastais with ${ing1},${ing2},${ing3}`);
   }
+
 };
+
+// restaurant.orderPasta && restaurant.orderPasta("M","B")
+
+restaurant.guessNum = 0;
+const guest = restaurant.guessNum ?? 10;
+console.log(guest);
+
+
+// console.log("h" && 23 && null && 0);
+// const guest1 = restaurant.numGuest ? restaurant.numGuest : 10;
+// console.log(guest1);
+// const guest1 = restaurant.numGuest || 10;
+// console.log(guest1);
+
+
+
+// const add = function(...numbers){
+//   let sum = 0;
+//   for(let i = 0;i < numbers.length;i ++){
+//     sum += numbers[i];
+//   }
+//   console.log(sum);
+// }
+// add(1,2,3,4,5,6,7,8,9,10)
+// const {sat : {open} , ...others} = restaurant.openingHours;
+// console.log(open,others);
+
+
+// const [a,b,...others] = [1,2,3,4,5,6,7,8,9,10]
+// console.log(a,b,others);
+
+// const [firstFood,secondFood,...others] = [...restaurant.mainMenu,restaurant.starterMenu]
+// console.log(firstFood,secondFood,others);
 
 // const ingredient = [
 //   prompt(`let's make pasta with ing1?`),
