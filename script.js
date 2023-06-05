@@ -294,52 +294,52 @@ const restaurant = {
 // for(const [i,val] of menu.entries()){
 //   console.log(`${i+1} : ${val}`);
 // }
-const odds= {
-  team1: 1.33,
-  x: 3.25,
-  team2: 6.5,
-}
-const game = {
-  team1: 'Bayern Munich',
-  team2: 'Borrussia Dortmund',
-  players: [
-    [
-      'Neuer',
-      'Pavard',
-      'Martinez',
-      'Alaba',
-      'Davies',
-      'Kimmich',
-      'Goretzka',
-      'Coman',
-      'Muller',
-      'Gnarby',
-      'Lewandowski',
-    ],
-    [
-      'Burki',
-      'Schulz',
-      'Hummels',
-      'Akanji',
-      'Hakimi',
-      'Weigl',
-      'Witsel',
-      'Hazard',
-      'Brandt',
-      'Sancho',
-      'Gotze',
-    ],
-  ],
-  score: '4:0',
-  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
-  date: 'Nov 9th, 2037',
-  odds,
-};
+// const odds= {
+//   team1: 1.33,
+//   x: 3.25,
+//   team2: 6.5,
+// }
+// const game = {
+//   team1: 'Bayern Munich',
+//   team2: 'Borrussia Dortmund',
+//   players: [
+//     [
+//       'Neuer',
+//       'Pavard',
+//       'Martinez',
+//       'Alaba',
+//       'Davies',
+//       'Kimmich',
+//       'Goretzka',
+//       'Coman',
+//       'Muller',
+//       'Gnarby',
+//       'Lewandowski',
+//     ],
+//     [
+//       'Burki',
+//       'Schulz',
+//       'Hummels',
+//       'Akanji',
+//       'Hakimi',
+//       'Weigl',
+//       'Witsel',
+//       'Hazard',
+//       'Brandt',
+//       'Sancho',
+//       'Gotze',
+//     ],
+//   ],
+//   score: '4:0',
+//   scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+//   date: 'Nov 9th, 2037',
+//   odds,
+// };
 
 // Q1
-for(const [x,y] of game.scored.entries()){
-  console.log(`Goal ${x+1} : ${y}`);
-}
+// for(const [x,y] of game.scored.entries()){
+//   console.log(`Goal ${x+1} : ${y}`);
+// }
 
 // Q2
 // const oddVal = Object.values(odds);
@@ -349,16 +349,16 @@ for(const [x,y] of game.scored.entries()){
 //   // console.log(avg);
 //   console.log(x,y,z);
 // }
-let sum = 0;
+// let sum = 0;
 // for(let i=0;i< oddVal.length;i++){
 //   sum += oddVal[i];
 // }
 
-for(const x of Object.values(odds)){
-  sum += x;
-}
-let divsum = sum / 3;
-console.log(divsum);
+// for(const x of Object.values(odds)){
+//   sum += x;
+// }
+// let divsum = sum / 3;
+// console.log(divsum);
 
 // Q3
 // for(const x of Object.values(odds)){
@@ -373,7 +373,32 @@ console.log(divsum);
 //   console.log(`${team1} ${x}`);
 // }
 
-for(const[team,odd] of Object.entries(game.odds)){
-  const teamStr = team === "x" ? "Draw" : `${game[team]}`;
-  console.log(`Victory of ${teamStr} : ${odd}`);
+// for(const[team,odd] of Object.entries(game.odds)){
+//   const teamStr = team === "x" ? "Draw" : `${game[team]}`;
+//   console.log(`Victory of ${teamStr} : ${odd}`);
+// }
+
+const orderSet = new Set([
+  "pasta",
+  "p",
+  "p",
+  "p",
+  "z"
+]);
+console.log(orderSet);
+console.log(orderSet.size);
+console.log(orderSet.has("pasta"));
+console.log(orderSet.has("Sai"));
+console.log(orderSet.add("Sai"));
+// console.log(orderSet.delete("Sai"));
+for(const order of orderSet){
+  console.log(order);
 }
+const strSet = new Set("saiyannaing");
+console.log(strSet);
+
+const staff = ["waiter","chef","Manager","waiter","chef"];
+const uniqueStaff = new Set(staff);
+const arrStaff = [...uniqueStaff]
+console.log(uniqueStaff);
+console.log(arrStaff);
