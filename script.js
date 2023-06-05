@@ -378,27 +378,48 @@ const restaurant = {
 //   console.log(`Victory of ${teamStr} : ${odd}`);
 // }
 
-const orderSet = new Set([
-  "pasta",
-  "p",
-  "p",
-  "p",
-  "z"
-]);
-console.log(orderSet);
-console.log(orderSet.size);
-console.log(orderSet.has("pasta"));
-console.log(orderSet.has("Sai"));
-console.log(orderSet.add("Sai"));
-// console.log(orderSet.delete("Sai"));
-for(const order of orderSet){
-  console.log(order);
-}
-const strSet = new Set("saiyannaing");
-console.log(strSet);
+// const orderSet = new Set([
+//   "pasta",
+//   "p",
+//   "p",
+//   "p",
+//   "z"
+// ]);
+// console.log(orderSet);
+// console.log(orderSet.size);
+// console.log(orderSet.has("pasta"));
+// console.log(orderSet.has("Sai"));
+// console.log(orderSet.add("Sai"));
+// // console.log(orderSet.delete("Sai"));
+// for(const order of orderSet){
+//   console.log(order);
+// }
+// const strSet = new Set("saiyannaing");
+// console.log(strSet);
 
-const staff = ["waiter","chef","Manager","waiter","chef"];
-const uniqueStaff = new Set(staff);
-const arrStaff = [...uniqueStaff]
-console.log(uniqueStaff);
-console.log(arrStaff);
+// const staff = ["waiter","chef","Manager","waiter","chef"];
+// const uniqueStaff = new Set(staff);
+// const arrStaff = [...uniqueStaff]
+// console.log(uniqueStaff);
+// console.log(arrStaff);
+
+// const rest = new Map();
+// // rest.set("name","Sai Yan Naing")
+// // rest.set("Love","Nyi Ma Layyy")
+// // console.log(rest.set(1,"11"));
+// const time = 21;
+// console.log(rest.set('categories',["a","b","c","d"]).set("open",12).set("close",24).set(true,"We are opening now").set(false,"We are closing now"));
+// // console.log(rest.get("name"));
+
+// console.log( rest.get(time > rest.get("open") && time < rest.get("close")));
+
+const qusetion = new Map([
+  ["question","What is your fav programming language"]
+  [1,"C++"],
+  [2,"Java"],
+  [3,"JavaScript"],
+  ["correct", 3],
+  [true, "Correct"],
+  [false,"Try Again"]
+]);
+console.log(qusetion);
