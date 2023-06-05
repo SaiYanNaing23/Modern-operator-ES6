@@ -5,6 +5,22 @@ const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
 
 // Data needed for first part of the section
+const days = ["Mon","Tue","Wed","Thur","Fri","Sat","Sun"];
+const openingHours = {
+  Thur: {
+    open: 12,
+    close: 22,
+  },
+  Fri: {
+    open: 11,
+    close: 23,
+  },
+  Sat: {
+    open: 0, // Open 24 hours
+    close: 24,
+  },
+};
+// console.log(openingHours);
 const restaurant = {
   name: 'Classico Italiano',
   location: 'Via Angelo Tavanti 23, Firenze, Italy',
@@ -12,21 +28,9 @@ const restaurant = {
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
-  openingHours: {
-    thu: {
-      open: 12,
-      close: 22,
-    },
-    fri: {
-      open: 11,
-      close: 23,
-    },
-    sat: {
-      open: 0, // Open 24 hours
-      close: 24,
-    },
-  },
-  order : function(starterIndex,mainIndex){
+  openingHours,
+
+  order(starterIndex,mainIndex){
     return [this.starterMenu[starterIndex],this.mainMenu[mainIndex]]
   },
   orderPasta : function(ing1,ing2,ing3){
@@ -35,15 +39,25 @@ const restaurant = {
 
 };
 
-const restaurant1 = {
-  resName : "Hello",
-  numGuest : 0,
-}
 
-const restaurant2 = {
-  resName : "World",
-  owner : "Sai Yan Naing",
-}
+
+// const {Mon:{open}} = openingHours;
+// console.log(open);
+// for(const day of days){
+//   const open = restaurant.openingHours[day]?.open ??"closed";
+//   console.log(`On ${day} oprn at ${open}`);
+// }
+
+
+// const restaurant1 = {
+//   resName : "Hello",
+//   numGuest : 0,
+// }
+
+// const restaurant2 = {
+//   resName : "World",
+//   owner : "Sai Yan Naing",
+// }
 // OR
 // restaurant1.numGuest ||= 10;
 // restaurant2.owner || "Anynomous";
@@ -257,8 +271,9 @@ const restaurant2 = {
 // console.log(closeWinner);
 
 // New feature of array ES6
-const menu = [...restaurant.mainMenu,...restaurant.starterMenu];
+// const menu = [...restaurant.mainMenu,...restaurant.starterMenu];
 
-for(const [i,val] of menu.entries()){
-  console.log(`${i+1} : ${val}`);
-}
+// for(const [i,val] of menu.entries()){
+//   console.log(`${i+1} : ${val}`);
+// }
+
