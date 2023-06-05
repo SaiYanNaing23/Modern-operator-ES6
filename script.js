@@ -161,75 +161,75 @@ const restaurant2 = {
 // const newarr = [...arr,4,5]
 // console.log(newarr);
 
-const game = {
-  team1: 'Bayern Munich',
-  team2: 'Borrussia Dortmund',
-  players: [
-    [
-      'Neuer',
-      'Pavard',
-      'Martinez',
-      'Alaba',
-      'Davies',
-      'Kimmich',
-      'Goretzka',
-      'Coman',
-      'Muller',
-      'Gnarby',
-      'Lewandowski',
-    ],
-    [
-      'Burki',
-      'Schulz',
-      'Hummels',
-      'Akanji',
-      'Hakimi',
-      'Weigl',
-      'Witsel',
-      'Hazard',
-      'Brandt',
-      'Sancho',
-      'Gotze',
-    ],
-  ],
-  score: '4:0',
-  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
-  date: 'Nov 9th, 2037',
-  odds: {
-    team1: 1.33,
-    x: 3.25,
-    team2: 6.5,
-  },
-};
-// Q1
-const [player1,player2] = game.players;
-console.log(player1,player2);
+// const game = {
+//   team1: 'Bayern Munich',
+//   team2: 'Borrussia Dortmund',
+//   players: [
+//     [
+//       'Neuer',
+//       'Pavard',
+//       'Martinez',
+//       'Alaba',
+//       'Davies',
+//       'Kimmich',
+//       'Goretzka',
+//       'Coman',
+//       'Muller',
+//       'Gnarby',
+//       'Lewandowski',
+//     ],
+//     [
+//       'Burki',
+//       'Schulz',
+//       'Hummels',
+//       'Akanji',
+//       'Hakimi',
+//       'Weigl',
+//       'Witsel',
+//       'Hazard',
+//       'Brandt',
+//       'Sancho',
+//       'Gotze',
+//     ],
+//   ],
+//   score: '4:0',
+//   scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+//   date: 'Nov 9th, 2037',
+//   odds: {
+//     team1: 1.33,
+//     x: 3.25,
+//     team2: 6.5,
+//   },
+// };
+// // Q1
+// const [player1,player2] = game.players;
+// console.log(player1,player2);
 
-// Q2
-const [gk,...fieldPlayer] = player1;
-console.log(gk,fieldPlayer);
+// // Q2
+// const [gk,...fieldPlayer] = player1;
+// console.log(gk,fieldPlayer);
 
-// Q3
-const allPlayers = [...player1,...player2]
-console.log(allPlayers);
+// // Q3
+// const allPlayers = [...player1,...player2]
+// console.log(allPlayers);
 
-// Q4
-const player1Final = [...player1,"T","b","c"];
-console.log(player1Final);
+// // Q4
+// const player1Final = [...player1,"T","b","c"];
+// console.log(player1Final);
 
-// Q5
-const {odds: {team1,x:draw,team2}} = game;
-console.log(team1,draw,team2);
+// // Q5
+// const {odds: {team1,x:draw,team2}} = game;
+// console.log(team1,draw,team2);
 
-// Q6
-const printGoal = function(...printGoal){
-  console.log(`${printGoal.length} goals were scored.`);
-}
-printGoal(...game.scored);
+// // Q6
+// const printGoal = function(...printGoal){
+//   console.log(`${printGoal.length} goals were scored.`);
+// }
+// printGoal(...game.scored);
 
-// Q7
-const closeWinner = (team1<team2 && `team 1 gonna be win`) || (team2<team1 && `team 2 gonna be win`);
-console.log(closeWinner);
+// // Q7
+// const closeWinner = (team1<team2 && `team 1 gonna be win`) || (team2<team1 && `team 2 gonna be win`);
+// console.log(closeWinner);
 
 // const [player1,player2] = [game.team1,game.team2];
 // // console.log(player1,player2);
@@ -255,3 +255,10 @@ console.log(closeWinner);
 
 // const closeWinner = (team1<team2 && `team 1 gonna be win`) || (team2<team1 && `team 2 gonna be win`);
 // console.log(closeWinner);
+
+// New feature of array ES6
+const menu = [...restaurant.mainMenu,...restaurant.starterMenu];
+
+for(const [i,val] of menu.entries()){
+  console.log(`${i+1} : ${val}`);
+}
