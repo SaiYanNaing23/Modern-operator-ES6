@@ -439,35 +439,94 @@ const flights =
 
 // GOOD LUCK 😀
 
-const gameEvents = new Map([
-  [17, '⚽️ GOAL'],
-  [36, '🔁 Substitution'],
-  [47, '⚽️ GOAL'],
-  [61, '🔁 Substitution'],
-  [64, '🔶 Yellow card'],
-  [69, '🔴 Red card'],
-  [70, '🔁 Substitution'],
-  [72, '🔁 Substitution'],
-  [76, '⚽️ GOAL'],
-  [80, '⚽️ GOAL'],
-  [92, '🔶 Yellow card'],
-]);
+// const gameEvents = new Map([
+//   [17, '⚽️ GOAL'],
+//   [36, '🔁 Substitution'],
+//   [47, '⚽️ GOAL'],
+//   [61, '🔁 Substitution'],
+//   [64, '🔶 Yellow card'],
+//   [69, '🔴 Red card'],
+//   [70, '🔁 Substitution'],
+//   [72, '🔁 Substitution'],
+//   [76, '⚽️ GOAL'],
+//   [80, '⚽️ GOAL'],
+//   [92, '🔶 Yellow card'],
+// ]);
 
-// Q1
-const events = [...new Set(gameEvents.values())];
-console.log(events);
+// // Q1
+// const events = [...new Set(gameEvents.values())];
+// console.log(events);
 
-// Q2
-gameEvents.delete(64)
-console.log(gameEvents);
+// // Q2
+// gameEvents.delete(64)
+// console.log(gameEvents);
 
-// Q3
-const footballTime = [...gameEvents.keys()].pop();
-console.log(footballTime);
-console.log(`An event happened,on average, every ${footballTime/gameEvents.size} minutes`);
+// // Q3
+// const footballTime = [...gameEvents.keys()].pop();
+// console.log(footballTime);
+// console.log(`An event happened,on average, every ${footballTime/gameEvents.size} minutes`);
 
-// Q4
-for(const [time,val] of gameEvents){
-  const halfstr = time < 45 ? "first" : "Second";
-  console.log(`${halfstr.toLocaleUpperCase()} HALF ${time}: ${val}`);
+// // Q4
+// for(const [time,val] of gameEvents){
+//   const halfstr = time < 45 ? "first" : "Second";
+//   console.log(`${halfstr.toLocaleUpperCase()} HALF ${time}: ${val}`);
+// }
+
+const checkMiddleSeat = function(seat){
+  const seatLastWord = seat.slice(-1);
+  const result = seatLastWord === "B" || seatLastWord === "E" ? "You got middle seat" : "Sorry all middle seats are gone.";
+  return result
 }
+
+console.log(checkMiddleSeat("22B"));
+console.log(checkMiddleSeat("12A"));
+console.log(checkMiddleSeat("24E"));
+
+const ownerName = "Sai Yan naing";
+
+console.log(ownerName.toLocaleUpperCase());
+
+const greet = "hEllo";
+const lowerCase = greet.toLocaleLowerCase();
+const firstCapt = lowerCase[0].toUpperCase() + lowerCase.slice(1)
+console.log(firstCapt);
+console.log(lowerCase);
+
+const inputEmail = "           Hello@gmail.com      ";
+const tlower = inputEmail.toLocaleLowerCase().trim();
+// const correctEmail = tlower.trim()
+console.log(tlower);
+
+const currentMMk = "200,00 MMK";
+const currentUSD = currentMMk.replace("MMK","USD").replace(",",".");
+console.log(currentMMk,currentUSD);
+
+const str = "All passenger come to bordering door 12, bordering door 23!";
+console.log(str.replace(/door/g,"gate"));
+console.log(str.replaceAll("door", "Heart"));
+
+console.log(str.includes("come"));
+console.log(str.startsWith("A"));
+console.log(str.endsWith("2"));
+console.log("------------------------------------------------------------------");
+console.log("A+very+nice+string".split("+"));
+
+const namecart = function(names){
+  const inputName = names.split(" ");
+  const fullName = [];
+  for(const word of inputName){
+    fullName.push(word[0].toLocaleUpperCase() + word.slice(1));
+  }
+  console.log(fullName.join(" "));
+}
+
+namecart("sai yan naing");
+
+const numCart = function (number) {
+  const str = number + "";
+  const last = str.slice(-4);
+  console.log(last.padStart(str.length,"+"));
+}
+
+numCart("09248198410283419283")
+numCart(1212174923749283472374)
